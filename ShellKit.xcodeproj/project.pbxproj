@@ -7,14 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AB27123D2217D36A00AA10FD /* ShellKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AB27123C2217D36A00AA10FD /* ShellKit.h */; };
-		AB27123F2217D36A00AA10FD /* ShellKit.m in Sources */ = {isa = PBXBuildFile; fileRef = AB27123E2217D36A00AA10FD /* ShellKit.m */; };
+		AB2712462217D42200AA10FD /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2712452217D42200AA10FD /* Command.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AB2712392217D36A00AA10FD /* libShellKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libShellKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		AB27123C2217D36A00AA10FD /* ShellKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShellKit.h; sourceTree = "<group>"; };
-		AB27123E2217D36A00AA10FD /* ShellKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShellKit.m; sourceTree = "<group>"; };
+		AB2712452217D42200AA10FD /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,8 +29,8 @@
 		AB2712302217D36A00AA10FD = {
 			isa = PBXGroup;
 			children = (
-				AB27123B2217D36A00AA10FD /* ShellKit */,
 				AB27123A2217D36A00AA10FD /* Products */,
+				AB27123B2217D36A00AA10FD /* ShellKit */,
 			);
 			sourceTree = "<group>";
 		};
@@ -47,8 +45,7 @@
 		AB27123B2217D36A00AA10FD /* ShellKit */ = {
 			isa = PBXGroup;
 			children = (
-				AB27123C2217D36A00AA10FD /* ShellKit.h */,
-				AB27123E2217D36A00AA10FD /* ShellKit.m */,
+				AB2712452217D42200AA10FD /* Command.swift */,
 			);
 			path = ShellKit;
 			sourceTree = "<group>";
@@ -60,7 +57,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB27123D2217D36A00AA10FD /* ShellKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +91,7 @@
 				TargetAttributes = {
 					AB2712382217D36A00AA10FD = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -120,7 +117,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB27123F2217D36A00AA10FD /* ShellKit.m in Sources */,
+				AB2712462217D42200AA10FD /* Command.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,20 +238,35 @@
 		AB2712432217D36A00AA10FD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				EXECUTABLE_PREFIX = lib;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
 		AB2712442217D36A00AA10FD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				EXECUTABLE_PREFIX = lib;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
