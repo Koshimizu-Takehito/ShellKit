@@ -30,7 +30,7 @@
 			isa = PBXGroup;
 			children = (
 				AB27123A2217D36A00AA10FD /* Products */,
-				AB27123B2217D36A00AA10FD /* ShellKit */,
+				AB27123B2217D36A00AA10FD /* Sources */,
 			);
 			sourceTree = "<group>";
 		};
@@ -42,7 +42,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AB27123B2217D36A00AA10FD /* ShellKit */ = {
+		AB27123B2217D36A00AA10FD /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AB27124B2217D7A000AA10FD /* ShellKit */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		AB27124B2217D7A000AA10FD /* ShellKit */ = {
 			isa = PBXGroup;
 			children = (
 				AB2712452217D42200AA10FD /* Command.swift */,
