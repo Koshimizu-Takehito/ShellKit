@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		AB2712462217D42200AA10FD /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2712452217D42200AA10FD /* Command.swift */; };
+		AB78D9762218FB92000A5C94 /* StreamReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB78D9752218FB92000A5C94 /* StreamReader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AB2712392217D36A00AA10FD /* libShellKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libShellKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB2712452217D42200AA10FD /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		AB78D9752218FB92000A5C94 /* StreamReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamReader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				AB2712452217D42200AA10FD /* Command.swift */,
+				AB78D9752218FB92000A5C94 /* StreamReader.swift */,
 			);
 			path = ShellKit;
 			sourceTree = "<group>";
@@ -126,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB2712462217D42200AA10FD /* Command.swift in Sources */,
+				AB78D9762218FB92000A5C94 /* StreamReader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

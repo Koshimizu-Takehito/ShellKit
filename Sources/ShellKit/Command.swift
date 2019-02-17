@@ -19,22 +19,25 @@ public struct Command: Hashable {
 
 extension Command {
 
-    public var lines: [String] {
-        return text.split(separator: "\n").map(String.init)
+    public var lines: AnySequence<String> {
+        let task = self.task()
+        task.process.launch()
+        return StreamReader.read(task.pipe.fileHandleForReading)
     }
 
     public var text: String {
-        let stdOut = readStdOut()
-        return String(data: stdOut, encoding: .utf8)!
+        let task = self.task()
+        task.process.launch()
+        let data = task.pipe.fileHandleForReading.readDataToEndOfFile()
+        return String(data: data, encoding: .utf8)!
     }
 
-    public func readStdOut() -> Data {
+    private func task() -> (process: Process, pipe: Pipe) {
         let (process, pipe) = (Process(), Pipe())
         process.launchPath = "/bin/sh"
         process.arguments = ["-c", command]
         process.standardOutput = pipe
-        process.launch()
-        return pipe.fileHandleForReading.readDataToEndOfFile()
+        return (process, pipe)
     }
 }
 
