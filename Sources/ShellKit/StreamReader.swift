@@ -42,7 +42,6 @@ class StreamReader {
         self.delimeter = delimeter.data(using: encoding)!
         self.encoding = encoding
         self.chunk = chunk
-        rewind()
     }
 
     deinit {
